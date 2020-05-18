@@ -125,20 +125,6 @@ variable "cloudsql_backup_location" {
   description = "Location in which to backup the database."
 }
 
-variable "generate_cron_schedule" {
-  type    = string
-  default = "0 0 1 1 0"
-
-  description = "Schedule to execute the generation service."
-}
-
-variable "generate_regions" {
-  type    = list(string)
-  default = []
-
-  description = "List of regions for which to generate data."
-}
-
 variable "deploy_debugger" {
   type    = bool
   default = false

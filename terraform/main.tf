@@ -60,7 +60,7 @@ resource "google_compute_global_address" "private_ip_address" {
 resource "google_service_networking_connection" "private_vpc_connection" {
   network                 = "projects/${data.google_project.project.project_id}/global/networks/default"
   service                 = "servicenetworking.googleapis.com"
-  reserved_peering_ranges = [google_compute_global_address.private_ip_address.name]
+  reserved_peering_ranges = [google_compute_global_address.private_ip_address.name, "private-ip-address2"]
 
   depends_on = [
     google_project_service.services["compute.googleapis.com"],

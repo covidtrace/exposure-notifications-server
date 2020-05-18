@@ -47,7 +47,7 @@ resource "google_sql_database_instance" "db-inst" {
 
     ip_configuration {
       require_ssl     = true
-      private_network = google_service_networking_connection.private_vpc_connection.network
+      private_network = "projects/${data.google_project.project.project_id}/global/networks/default"
     }
   }
 

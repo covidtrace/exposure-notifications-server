@@ -46,7 +46,7 @@ resource "google_secret_manager_secret_iam_member" "debugger-db" {
 }
 
 resource "google_project_iam_member" "debugger-run-viewer" {
-  project = google_cloud_run_service.generate.project
+  project = google_cloud_run_service.export.project
   role    = "roles/run.viewer"
   member  = "serviceAccount:${google_service_account.debugger.email}"
 }
