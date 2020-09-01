@@ -1,4 +1,4 @@
-project = "covidtrace-reference"
+project = "covidtrace-nevada-staging"
 
 db_name                  = "zxmgc"
 cloudsql_tier            = "db-custom-1-3840"

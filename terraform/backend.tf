@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket  = "covidtrace-reference-terraform"
+    bucket  = "covidtrace-nevada-staging-terraform"
     prefix  = "terraform/ens"
   }
 }
